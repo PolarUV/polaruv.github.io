@@ -52,7 +52,7 @@ nav, il, a {
 }
 
 nav, il, a:hover {
-  color:rgb(255, 178, 13);
+  color:rgb(126, 13, 255);
 }
 
 header {
@@ -96,7 +96,14 @@ button {
 }
 
 button:hover {
-  background: rgb(202, 207, 255);
+  background: rgb(167, 176, 255);
+  transform: scale(1.05);
+  transition: 500ms;
+}
+
+button:active {
+  transform: scale(0.90);
+  transition: 150ms;
 }
 
 video {
@@ -107,4 +114,23 @@ video {
   height: 300px;
   width: 300px;
   text-align: center;
+}
+
+/* This styles the aside container */
+#aSide {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: calc(50% - 250px);
+  right: 5%;
+}
+
+/* This styles the 3D object inserted in the aside container */
+#aSide model-viewer {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
 }
