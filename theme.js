@@ -1,16 +1,24 @@
-// Выбираем кнопку
 const btn = document.querySelector(".btn-toggle");
-// Выбираем таблицу стилей
-const theme = document.querySelector("#theme-link");
-// Отслеживаем щелчок по кнопке
-btn.addEventListener("click", function() {
-  // Если текущий адрес содержит "light-theme.css"
-  if (theme.getAttribute("href") == "lighttheme.css") {
-    // …то переключаемся на "dark-theme.css"
-    theme.href = "darktheme.css";
-    // В противном случае… 
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
   } else {
-    // …переключаемся на "light-theme.css"
-    theme.href = "lighttheme.css";
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
   }
+  localStorage.setItem("theme", theme);
 });
