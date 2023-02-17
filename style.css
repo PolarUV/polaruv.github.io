@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "New_Zelek";
-  src: url(font/New_Zelek.ttf);
+  font-family: "Montserrat-black";
+  src: url(font/Montserrat/static/Montserrat-Black.ttf);
 }
 
-html {
-  scroll-behavior: smooth;
-  text-align: center;
+@font-face {
+  font-family: "Montserrat-light";
+  src: url(font/Montserrat/static/Montserrat-Light.ttf);
 }
 
 body {
@@ -33,7 +33,22 @@ body.dark-theme {
 }
 
 * {
-  font-family: "New_Zelek";
+  font-family: "Montserrat-black";
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  text-align: center;
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 64px;
 }
 
 nav {
@@ -43,7 +58,69 @@ nav {
   z-index: 9999;
   width: 100%;
   backdrop-filter: blur(10px);
+  text-align: right;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Montserrat-light";
+}
+
+nav, il, a {
+  text-decoration: none;
+  color: var(--text-color)
+}
+
+nav, il, a:hover {
+  color:rgb(126, 13, 255);
+}
+
+button {
+  height: 40px;
+  width: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--btn-color);
+  z-index: 1;
+}
+
+button:hover {
+  background: rgb(167, 176, 255);
+  transform: scale(1.05);
+  transition: 500ms;
+}
+
+button:active {
+  transform: scale(0.90);
+  transition: 150ms;
+}
+
+p {
+  font-family:'Montserrat-light';
+  font-size: 24px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/* @font-face {
+  font-family: "Halvar Breit Blk";
+  src: url(font/HalvarBreit-Blk.ttf);
+} */
+
+/* nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  backdrop-filter: blur(10px);
   text-align: left;
+  text-decoration: none;
+  color: var(--text-color)
 }
 
 nav, il, a {
@@ -114,23 +191,4 @@ video {
   height: 300px;
   width: 300px;
   text-align: center;
-}
-
-/* This styles the aside container */
-#aSide {
-  height: 600px;
-  width: 600px;
-  position: absolute;
-  top: calc(50% - 250px);
-  right: 5%;
-}
-
-/* This styles the 3D object inserted in the aside container */
-#aSide model-viewer {
-  height: 600px;
-  width: 600px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: none;
-}
+} 
