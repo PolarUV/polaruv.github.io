@@ -1,0 +1,133 @@
+body {
+  --text-color: #222;
+  --bkg-color: #fff;
+  --btn-color: #5f5f5f8a;
+  --btn-txt-color: rgb(0,0,0);
+}
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #45464f;
+  --btn-color: #cacfff8a;
+  --btn-txt-color: rgb(0,0,0);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --text-color: #eee;
+    --bkg-color: #45464f;
+    --btn-color: #cacfff8a;
+    --btn-txt-color: rgb(0,0,0);
+  }
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --btn-color: #5f5f5f8a;
+    --btn-txt-color: rgb(0,0,0);
+  }
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(font/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+* {
+    font-family: "Montserrat";
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    vertical-align: middle;
+    color: var(--text-color);
+}
+
+html {
+    border: 2px groove rgb(255, 0, 179);
+    background-color: var(--bkg-color);
+    scroll-behavior: smooth;
+    color: var(--text-color);
+}
+
+header {
+    border: 5px groove rgb(255, 0, 0);
+    top: 180px;
+    left: 0;
+    width: 100ov;
+    height: 100ex;
+    background-image: url(img/background\ image.png);
+    vertical-align: top;
+}
+
+nav {
+    border: 2px groove rgb(0, 255, 0);
+    background-color: var(--bkg-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 39px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: inherit;
+}
+
+il {
+    vertical-align: middle;
+    text-align: right;
+    border: 2px groove rgb(255, 102, 0);
+    height: 100ov;
+}
+
+il :hover {
+    color: rgb(255, 102, 0);
+}
+
+a {
+    text-decoration: none;
+    color:var(--text-color);
+}
+
+body {
+    border: 2px groove rgb(0, 0, 0);
+}
+
+section {
+    border: 2px groove rgb(0, 0, 0);
+    display: contents;
+    width: 100%;
+    height: 600px;
+}
+
+article {
+    border: 2px groove rgb(0, 255, 242);
+    margin: auto;
+}
+
+aside {
+    border: 2px groove rgb(183, 0, 255);
+}
+
+footer {
+    border: 2px groove rgb(0, 0, 255);
+    cursor: grab;
+}
+
+.btn-toggle {
+    border-radius: 50%;
+    border: 0;
+    color: var(--btn-txt-color);
+}
+
+.btn-toggle:hover {
+    color:blue
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 48
+}
