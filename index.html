@@ -9,13 +9,14 @@
 <body>
 	<header>
 		<a href="#" class="logo">Polar<span>UV</span></a>
+		<div class="menuToggle" onclick="toggleMenu();"></div>
 		<ul class="navigation">
-			<li><a href="#banner">Главная</a></li>
-			<li><a href="#about">О нас</a></li>
-			<li><a href="#specification">Характеристики</a></li>
-			<li><a href="#gallary">Галерея</a></li>
-			<li><a href="#team">Команда</a></li>
-			<li><a href="#contact">Контакты</a></li>
+			<li><a href="#banner" onclick="toggleMenu();">Главная</a></li>
+			<li><a href="#about" onclick="toggleMenu();">О нас</a></li>
+			<li><a href="#specification" onclick="toggleMenu();">Характеристики</a></li>
+			<li><a href="#gallary" onclick="toggleMenu();">Галерея</a></li>
+			<li><a href="#team" onclick="toggleMenu();">Команда</a></li>
+			<li><a href="#contact" onclick="toggleMenu();">Контакты</a></li>
 		</ul>
 	</header>
 	<section class="banner" id="banner">
@@ -51,6 +52,7 @@
 					<img src="img/4.jpg">
 				</div>
 				<div class="text">
+					<h3>Никрутейшая характеристика</h3>
 					<p>Наикрутейшая эффективность</p>
 				</div>
 			</div>
@@ -59,6 +61,7 @@
 					<img src="img/4.jpg">
 				</div>
 				<div class="text">
+					<h3>Никрутейшая характеристика</h3>
 					<p>Наикрутейшая эффективность</p>
 				</div>
 			</div>
@@ -67,6 +70,7 @@
 					<img src="img/4.jpg">
 				</div>
 				<div class="text">
+					<h3>Никрутейшая характеристика</h3>
 					<p>Наикрутейшая эффективность</p>
 				</div>
 			</div>
@@ -152,7 +156,7 @@
 					<img src="img/ASH2.jpg">
 				</div>
 				<div class="text">
-					<h3>Шкрябин Артём</h3>
+					<h3>Шкрябин Артем</h3>
 				</div>
 			</div>
 			<div class="box">
@@ -174,11 +178,40 @@
 		</div>
 	</section>
 
+	<section class="contact" id="contact">
+		<div class="title">
+			<h2 class="titleText"><span>К</span>онтакты</h2>
+			<p>Здесь вы можете написать нам Ваш отзыв</p>
+		</div>
+		<div class="contactForm">
+			<h3>Send massage</h3>
+			<div class="inputBox">
+				<input type="text" placeholder="Name">
+			</div>
+			<div class="inputBox">
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="inputBox">
+				<textarea placeholder="Name"></textarea>
+			</div>
+			<div class="inputBox">
+				<input type="submit" value="Send">
+			</div>
+		</div>
+	</section>
+
 	<script type="text/javascript">
 		window.addEventListener('scroll', function(){
 			const header = document.querySelector('header');
 			header.classList.toggle("sticky", window.scrollY > 0);
 		});
+
+		function toggleMenu() {
+			const menuToggle = document.querySelector('.menuToggle');
+			const navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		} 
 	</script>
 </body>
 </html>
