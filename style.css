@@ -24,7 +24,7 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url(img/Робот.jpg);
+	background: url(img/BG11.jpg);
 	background-size: cover;
 }
 
@@ -358,7 +358,7 @@ section {
 	text-decoration: none;
 	letter-spacing: 2px;
 	transition: 0.5s;
-	max-width: 100px;
+	max-width: 400px;
 	font-weight: 500;
 	border: none;
 	cursor: pointer;	
