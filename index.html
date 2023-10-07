@@ -5,26 +5,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PolarUV</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="img/WindowIcon.png" type="image/png">
 </head>
 <body>
 	<header>
 		<a href="#" class="logo">Polar<span>UV</span></a>
 		<div class="menuToggle" onclick="toggleMenu();"></div>
 		<ul class="navigation">
-			<li><a href="#banner" onclick="toggleMenu();">Главная</a></li>
+			<!-- <li><a href="#banner" onclick="toggleMenu();">Главная</a></li> -->
 			<li><a href="#about" onclick="toggleMenu();">Описание</a></li>
 			<li><a href="#specification" onclick="toggleMenu();">Характеристики</a></li>
-			<li><a href="#gallary" onclick="toggleMenu();">Галерея</a></li>
-			<li><a href="#team" onclick="toggleMenu();">Команда</a></li>
-			<li><a href="#contact" onclick="toggleMenu();">Связь с нами</a></li>
+			<li><a href="#projects" onclick="toggleMenu();">Проекты</a></li>
+			<li><a href="#gallery" onclick="toggleMenu();">Галерея</a></li>
+			<!-- <li><a href="#team" onclick="toggleMenu();">Команда</a></li> -->
+			<li><a href="#contact" onclick="toggleMenu();">Контакты</a></li>
 		</ul>
 	</header>
+
 	<section class="banner" id="banner">
-		<div class="content">
+		<div class="waves">
+			<h2>PolarUV</h2>
+			<div class="wave" id="wave1"></div>
+			<div class="wave" id="wave2"></div>
+			<div class="wave" id="wave3"></div>
+			<div class="wave" id="wave4"></div>
+		</div>
+		<!-- <div class="content">
 			<h2>Polar<span>UV</span></h2>
 			<p>Программно-аппаратная платформа <br>для необитаемых подводных аппаратов</p>
 			<a href="#about" class="btn">Узнать больше</a>
-		</div>
+		</div> -->
 	</section>
 
 	<section class="about" id="about">
@@ -40,10 +50,8 @@
 			</div>
 		</div>
 	</section>
-	<div class="specification" id="specification">
-	</div>
 
-	<section class="specification" id="specification1">
+	<section class="specification" id="specification">
 		<div class="title white">
 			<h2 class="titleText"><span>Х</span>арактеристики</h2>
 			<p>Здесь продемонстрированы качества нашей программы</p>
@@ -76,10 +84,42 @@
 					<p>Наикрутейшая эффективность</p>
 				</div>
 			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="img/settings-gears.png">
+				</div>
+				<div class="text">
+					<h3>Никрутейшая характеристика</h3>
+					<p>Наикрутейшая эффективность</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="img/settings-gears.png">
+				</div>
+				<div class="text">
+					<h3>Никрутейшая характеристика</h3>
+					<p>Наикрутейшая эффективность</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section class="gallary" id="gallary">
+	<section class="projects" id="projects">
+		<div class="row">
+			<div class="col50">
+				<h2 class="titleText">Проекты</h2>
+				<!-- <p>	Универсальная программно-аппаратная платформа представляет собой набор из 3-х аппаратных модулей и программного обеспечения для них, который позволяет разработчикам необитаемых подводных аппаратов снизить затраты времени и средств на процесс разработки, а также получить возможность более гибкой настройки и модификации оборудования аппаратов. В процессе реализации проекта для каждого из модулей будут спроектированы печатные платы, подобраны компоненты и произведен монтаж электроники. Инновационный подход предполагает совместимость модулей не с одним, а с множеством вариантов подключаемых компонентов. Испытания платформы будут производиться на необитаемом подводном аппарате, разработанном на ее основе.<br><br>Необитаемые подводные аппараты представляют собой сложную систему, состоящую из множества разнородных элементов, тип и количество которых определяются в зависимости от конфигурации и назначения конкретного аппарата. Согласование всех элементов и слияние в единую систему зачастую представляет собой непростую задачу и требует больших затрат времени и сил, потому что каждый из них имеет свои уникальные особенности, требования к эксплуатации и технические характеристики. Большинство необитаемых подводных аппаратов являются готовым устройством, закрытым для модификации его внутренних компонентов, так как добавление или изменение модулей ведет к существенным трудностям.</p> -->
+			</div>
+			<div class="col50">
+				<div class="imgBx">
+					<img src="img/Робот2.jpg">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section class="gallery" id="gallery">
 		<div class="title">
 			<h2 class="titleText"><span>Г</span>алерея</h2>
 			<p>Здесь представленны реальные фотографии наших проектов</p>
@@ -137,9 +177,35 @@
 		<div class="title">
 			<a href="#" class="btn">Посмотреть все</a>
 		</div>
+	</section> -->
+
+	<section class="gallery" id="gallery">
+		<div class="title">
+			<h2 class="titleText"><span>Г</span>алерея</h2>
+			<p>Здесь представленны реальные фотографии наших проектов</p>
+			<br><br>
+		</div>
+		<div class="slider-wrapper">
+			<div class="slider">
+				<img src="img/4.jpg" alt="robot" id="slide-1">
+				<img src="img/Робот.jpg" alt="robot" id="slide-2">
+				<img src="img/4.jpg" alt="robot" id="slide-3">
+				<img src="img/Робот.jpg" alt="robot" id="slide-4">
+				<img src="img/4.jpg" alt="robot" id="slide-5">
+				<img src="img/Робот.jpg" alt="robot" id="slide-6">
+			</div>
+			<div class="slider-nav">
+				<a href="#slide-1"></a>
+				<a href="#slide-2"></a>
+				<a href="#slide-3"></a>
+				<a href="#slide-4"></a>
+				<a href="#slide-5"></a>
+				<a href="#slide-6s"></a>
+			</div>
+		</div>
 	</section>
 
-	<section class="team" id="team">
+	<!-- <section class="team" id="team">
 		<div class="title">
 			<h2 class="titleText"><span>К</span>оманда</h2>
 			<p>Здесь вы можете видеть нашу команду</p>
@@ -178,11 +244,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="contact" id="contact">
 		<div class="title">
-			<h2 class="titleText"><span>С</span>вязь с нами</h2>
+			<h2 class="titleText">Контакты</h2>
 			<p>Здесь вы можете написать нам Ваш отзыв</p>
 		</div>
 		<div class="contactForm">
